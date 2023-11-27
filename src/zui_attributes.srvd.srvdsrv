@@ -1,0 +1,4 @@
+@EndUserText.label: 'attributes service'
+define service ZUI_ATTRIBUTES {
+  expose ZI_ATTRIBUTES;
+}

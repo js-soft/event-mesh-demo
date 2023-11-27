@@ -1,0 +1,14 @@
+managed;
+//strict ( 2 );
+
+define behavior for ZI_ATTRIBUTES //alias <alias_name>
+persistent table ZATTRIBUTES
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+}
