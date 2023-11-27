@@ -1,0 +1,16 @@
+managed with additional save implementation in class zbp_amqp_test_cds_view unique;
+//strict ( 2 );
+
+define behavior for ZAMQP_TEST_CDS_VIEW //alias <alias_name>
+persistent table ZAMQP_TEST_DATA
+lock master
+//authorization master ( global )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  field ( mandatory ) stuff;
+  event AMQP_test_created parameter ZAMQP_TEST_EVENT_PARam;
+}

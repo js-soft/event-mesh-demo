@@ -3,7 +3,7 @@
 {
 "FROM":
 [
-"ZATTRIBUTES"
+"ZAMQP_TEST_DATA"
 ],
 "ASSOCIATED":
 [],

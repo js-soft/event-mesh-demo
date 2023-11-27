@@ -1,0 +1,20 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "event binding for amqp test",
+    "originalLanguage": "en"
+  },
+  "producerNamespace": "z",
+  "producer": "PEB45020AFC48C00A9F26BEEF5593825A",
+  "producerVersion": "0001",
+  "boName": "entry",
+  "boOperation": "create",
+  "producerType": "z.entry.create.v*",
+  "events": [
+    {
+      "eventVersion": "0001",
+      "entityName": "ZAMQP_TEST_CDS_VIEW",
+      "entityEventName": "AMQP_TEST_CREATED"
+    }
+  ]
+}

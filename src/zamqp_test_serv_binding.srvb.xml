@@ -4,9 +4,9 @@
   <asx:values>
    <SRVB>
     <METADATA>
-     <NAME>ZUI_ATTRIBUTES</NAME>
+     <NAME>ZAMQP_TEST_SERV_BINDING</NAME>
      <TYPE>SRVB/SVB</TYPE>
-     <DESCRIPTION>attributes service binding</DESCRIPTION>
+     <DESCRIPTION>Service binding for AMQP test</DESCRIPTION>
      <LINKS>
       <item>
        <HREF>versions</HREF>
@@ -14,13 +14,13 @@
        <TITLE>Historic versions</TITLE>
       </item>
       <item>
-       <HREF>/sap/bc/adt/repository/informationsystem/abaplanguageversions?uri=%2Fsap%2Fbc%2Fadt%2Fbusinessservices%2Fbindings%2Fzui_attributes</HREF>
+       <HREF>/sap/bc/adt/repository/informationsystem/abaplanguageversions?uri=%2Fsap%2Fbc%2Fadt%2Fbusinessservices%2Fbindings%2Fzamqp_test_serv_binding</HREF>
        <REL>http://www.sap.com/adt/relations/informationsystem/abaplanguageversions</REL>
        <TYPE>application/vnd.sap.adt.nameditems.v1+xml</TYPE>
        <TITLE>Allowed ABAP language versions</TITLE>
       </item>
       <item>
-       <HREF>/sap/bc/adt/businessservices/odatav2/ZUI_ATTRIBUTES</HREF>
+       <HREF>/sap/bc/adt/businessservices/odatav2/ZAMQP_TEST_SERV_BINDING</HREF>
        <REL>http://www.sap.com/categories/odatav2</REL>
        <TYPE>application/vnd.sap.adt.businessservices.odatav2.v2+xml</TYPE>
        <TITLE>ODATAV2</TITLE>
@@ -49,35 +49,21 @@
     </METADATA>
     <CONTENT>
      <BIND_TYPE_IMPL>
-      <NAME>ZUI_ATTRIBUTES</NAME>
+      <NAME>ZAMQP_TEST_SERV_BINDING</NAME>
      </BIND_TYPE_IMPL>
      <BIND_TYPE>ODATA</BIND_TYPE>
      <BIND_TYPE_VERSION>V2</BIND_TYPE_VERSION>
      <SERVICES>
       <item>
-       <SERVICE_NAME>ZUI_ATTRIBUTES</SERVICE_NAME>
+       <SERVICE_NAME>ZAMQP_TEST_SERV_BINDING</SERVICE_NAME>
        <SERVICE_CONTENT>
         <item>
          <SERVICE_VERSION>0001</SERVICE_VERSION>
          <RELEASE_STATE>NOT_RELEASED</RELEASE_STATE>
          <SRVD_REF>
-          <URI>/sap/bc/adt/ddic/srvd/sources/zui_attributes</URI>
+          <URI>/sap/bc/adt/ddic/srvd/sources/zamqp_test_service_def</URI>
           <TYPE>SRVD/SRV</TYPE>
-          <NAME>ZUI_ATTRIBUTES</NAME>
-         </SRVD_REF>
-         <BIND_TYPE_DATA>
-          <CONTENT>
-           <ENCODING>base64</ENCODING>
-          </CONTENT>
-         </BIND_TYPE_DATA>
-        </item>
-        <item>
-         <SERVICE_VERSION>0002</SERVICE_VERSION>
-         <RELEASE_STATE>NOT_RELEASED</RELEASE_STATE>
-         <SRVD_REF>
-          <URI>/sap/bc/adt/ddic/srvd/sources/zmk_test_cds_view_ui</URI>
-          <TYPE>SRVD/SRV</TYPE>
-          <NAME>ZMK_TEST_CDS_VIEW_UI</NAME>
+          <NAME>ZAMQP_TEST_SERVICE_DEF</NAME>
          </SRVD_REF>
          <BIND_TYPE_DATA>
           <CONTENT>

@@ -1,0 +1,7 @@
+abstract;
+strict;
+with hierarchy;
+
+define behavior for Z_entry_create_v1_1E69
+
+{}

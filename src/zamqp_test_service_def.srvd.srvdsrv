@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for AMQP test'
+define service ZAMQP_TEST_SERVICE_DEF {
+  expose ZAMQP_TEST_CDS_VIEW;
+}

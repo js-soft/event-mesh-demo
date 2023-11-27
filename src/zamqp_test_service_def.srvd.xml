@@ -3,12 +3,12 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <SRVD>
-    <NAME>ZUI_ATTRIBUTES</NAME>
+    <NAME>ZAMQP_TEST_SERVICE_DEF</NAME>
     <TYPE>SRVD/SRV</TYPE>
-    <DESCRIPTION>attributes service</DESCRIPTION>
+    <DESCRIPTION>Service definition for AMQP test</DESCRIPTION>
     <LANGUAGE>EN</LANGUAGE>
     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
-    <SOURCE_URI>./zui_attributes/source/main</SOURCE_URI>
+    <SOURCE_URI>./zamqp_test_service_def/source/main</SOURCE_URI>
     <SOURCE_TYPE>ABAP_SOURCE</SOURCE_TYPE>
     <SOURCE_ORIGIN_DESCRIPTION>ABAP Development Tools</SOURCE_ORIGIN_DESCRIPTION>
     <SRVD_SOURCE_TYPE>S</SRVD_SOURCE_TYPE>
