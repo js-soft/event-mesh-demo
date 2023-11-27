@@ -1,0 +1,126 @@
+{
+    "asyncapi": "2.0.0",
+    "x-sap-catalog-spec-version": "1.0",
+    "info": {
+        "title": "Custom RAP Event",
+        "version": "1.0",
+        "description": "Custom RAP Event"
+    },
+    "x-sap-api-type": "EVENT",
+    "x-sap-shortText": "Custom RAP Event",
+    "x-sap-stateInfo": {
+        "state": "active"
+    },
+    "channels": {
+        "ce/z/entry/v1": {
+            "subscribe": {
+                "message": {
+                    "description": "Custom RAP Event",
+                    "$ref": "#/components/messages/custom_RAP_event_v1"
+                }
+            }
+        }
+    },
+    "components": {
+        "messages": {
+            "custom_RAP_event_v1": {
+                "name": "z.entry.create.v1",
+                "summary": "Custom RAP Event",
+                "description": "Custom RAP Event",
+                "headers": {
+                    "properties": {
+                        "type": {
+                            "const": "z.entry.v1"
+                        },
+                        "source": {
+                            "const": "/default/sap.s4.custom/S9DCLNT100"
+                          },
+                        "datacontenttype": {
+                            "const": "application/json"
+                        }
+                    }
+                },
+                "payload": {
+                    "$ref": "#/components/schemas/z_entry_v1"
+                },
+                "traits": [
+                    {
+                        "$ref": "#/components/messageTraits/CloudEventContext"
+                    }
+                ]
+            }
+        },
+        "schemas": {
+            "z_entry_v1": {
+                "type": "object",
+                "properties": {
+                    "entry": {
+                        "description": "key",
+                        "type": "integer",
+                        "format": "int8"                        
+                    },
+                    "item": {
+                        "description": "stuff",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "messageTraits": {
+            "CloudEventContext": {
+                "headers": {
+                    "type": "object",
+                    "properties": {
+                        "specversion": {
+                            "description": "The version of the CloudEvents specification which the event uses. This enables the interpretation of the context.",
+                            "type": "string",
+                            "const": "1.0"
+                        },
+                        "type": {
+                            "description": "Type of occurrence which has happened. Often this property is used for routing, observability, policy enforcement, etc.",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "source": {
+                            "description": "This describes the event producer.",
+                            "type": "string",
+                            "format": "uri-reference"
+                        },
+                        "subject": {
+                            "description": "The subject of the event in the context of the event producer (identified by source).",
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "id": {
+                            "description": "ID of the event.",
+                            "type": "string",
+                            "minLength": 1,
+                            "examples": [
+                                "QgEK7wzuHtqdhJwqCS+VOA=="
+                            ]
+                        },
+                        "time": {
+                            "description": "Timestamp of when the occurrence happened. Must adhere to RFC 3339.",
+                            "type": "string",
+                            "format": "date-time",
+                            "examples": [
+                                "2018-04-05T17:31:00Z"
+                            ]
+                        },
+                        "datacontenttype": {
+                            "description": "Describe the data encoding format",
+                            "type": "string",
+                            "const": "application/json"
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "specversion",
+                        "source",
+                        "type"
+                    ]
+                }
+            }
+        }
+    }
+}
