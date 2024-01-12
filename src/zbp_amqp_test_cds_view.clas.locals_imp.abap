@@ -10,6 +10,7 @@ endclass.
 class lsc_ZAMQP_TEST_CDS_VIEW implementation.
 
   method save_modified.
+     "f
     if create-zamqp_test_cds_view is not initial.
       raise entity event zamqp_test_cds_view~amqp_test_created
             from value #( for entry in create-zamqp_test_cds_view
